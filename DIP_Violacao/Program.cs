@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DIP_Violacao.Payments;
+using System;
 
 namespace DIP_Violacao
 {
@@ -19,7 +16,12 @@ namespace DIP_Violacao
             //Modulos de alto nivel, é o lugar onde estão as regras de negocio.
             //Modulos de baixo nivel, são as tarefas realizadas pela nossa aplicação. São os detalhes. Data access SQL, Auteticação...
 
+            //Nesse exemplo vamos dizer que precisam usar banco de dados MongoDB e MYSQL
 
+            PaymentProcess payment = new PaymentProcess();
+            payment.Pay("ABC123");
+
+            Console.ReadLine();
 
 
 
